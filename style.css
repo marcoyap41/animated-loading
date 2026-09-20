@@ -13,6 +13,7 @@ p{
     color: azure;
     font-family: "Lucida Console", monospace;
     white-space: nowrap;
+    text-shadow: 0 0 15px, 0 0 8px azure;
     position: absolute;
     bottom: 100%;
     left:50%;
@@ -24,13 +25,13 @@ p{
     height: 50px;
     border: 6px solid plum;
     border-radius: 4px;
-    box-shadow: 0 0 8px plum, 0 0 8px plum inset;
+    box-shadow: 0 0 15px plum, 0 0 14px plum inset;
     position: absolute;
     top:50%;
     left:50%;
     translate: -50% -50%;
     z-index: 10;
-    animation: 2s Loading ease-in-out infinite;
+    animation: 2.5s Loading ease-in-out infinite;
 }
 
 @keyframes Loading{
@@ -46,4 +47,28 @@ p{
     100%{
         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
     }
+}
+
+.button-container{
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    translate: -50% 0;
+}
+
+#button{
+    background-color: plum;
+    font-family: 'Lucida console';
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 9px 18px;
+    display: inline-block;
+    cursor: crosshair;
+    transition-duration: 0.4s;
+}
+
+#button:hover{
+    transform: scale(1.15);
 }
