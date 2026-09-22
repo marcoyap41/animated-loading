@@ -1,36 +1,42 @@
+:root{
+    --gap: clamp(16px, 5vmin, 56px);
+    --box: clamp(64px, 10vmin, 220px);
+}
+
 body{
     background-color: black;
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap)
 }
 
 .loader-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap)
 }
 
 p{
     color: azure;
+    font-size: clamp(18px, 5vmin, 56px);
     font-family: "Lucida Console", monospace;
     white-space: nowrap;
     text-shadow: 0 0 15px, 0 0 8px azure;
-    position: absolute;
-    bottom: 100%;
-    left:50%;
-    translate: -50% -35px;
+    margin: 0;
 }
 
 .loading{
-    width: 50px;
-    height: 50px;
+    width: var(--box);
+    height: var(--box);
+    box-sizing: border-box;
     border: 6px solid plum;
     border-radius: 4px;
     box-shadow: 0 0 15px plum, 0 0 14px plum inset;
-    position: absolute;
-    top:50%;
-    left:50%;
-    translate: -50% -50%;
-    z-index: 10;
     animation: 2.5s Loading ease-in-out infinite;
 }
 
@@ -50,20 +56,19 @@ p{
 }
 
 .button-container{
-    position: absolute;
-    top: calc(50% + 100px);
-    left: 50%;
-    translate: -50% 0;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 #button{
     background-color: plum;
     font-family: 'Lucida console';
-    font-size: 20px;
+    font-size: clamp(16px, 4vmin, 40px);
     color: white;
     border: none;
     border-radius: 40px;
-    padding: 9px 18px;
+    padding: 0.5em 1em;
     display: inline-block;
     cursor: crosshair;
     transition-duration: 0.4s;

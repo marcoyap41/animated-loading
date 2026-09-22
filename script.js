@@ -3,7 +3,7 @@ button.addEventListener('click', pause)
 
 function pause() {
     document.getElementById('button').innerHTML = "Start"
-    document.getElementById('button').style.backgroundColor = "#4169E1"
+    document.getElementById('button').style.backgroundColor = "#6495ED"
     document.querySelector('.loading').style.animationPlayState = "paused"
 
     button.removeEventListener('click', pause)
